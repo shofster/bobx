@@ -20,7 +20,7 @@ func LittleEndianToInt(bytes []uint8) int64 {
 	s := 0
 	var v int64
 	for i := 0; i < len(bytes); i++ {
-		v |= int(bytes[i]) << s
+		v |= int64(bytes[i]) << s
 		s += 8
 	}
 	return v
